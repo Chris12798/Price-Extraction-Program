@@ -19,34 +19,10 @@ Beta version of a price monitoring system for an online retailer. Containing fou
 3. Saves everything into a spreadsheet (CSV file)
 4. Downloads book cover images
 
-## ⚙️ Installation Guide
-
-**1. Install Python**
-
-👉 Download [Python](https://www.python.org/downloads/) here.
-
-**2. Download the project**
-
-## ⚙️ Requirements
-- Python
-- pandas
-- requests
-- BeautifulSoup (bs4)
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to learn more and install pandas, requests, and BeautifulSoup.
-
-Here is how to install each library:
-```bash
-pip install pandas
-```
-```bash
-pip install requests
-```
-```bash
-pip install BeautifulSoup
-```
-
 ## 📓 Phases
+
+There are four phases associated with this scraper that shows the evolution of the code. Each phase builds on top of each other to get the completed scraper, **"Phase_4.py"**
+
 **Phase 1: Single Book**
 
 Scrapes one book and saves it to a CSV.
@@ -61,7 +37,75 @@ Scrapes all books across all categories.
 
 **Phase 4: Images**
 
-Downloads book images and stores them locally.
+Scrapes all books across all categories then downloads every book image and stores them locally.
+
+## ⚙️ Requirements
+- Python
+- pandas
+- requests
+- BeautifulSoup (bs4)
+
+## ⚙️ Installation Guide
+
+**1. Install Python**
+
+👉 Download [Python](https://www.python.org/downloads/) here.
+
+**2. Download the project on GitHub**
+  - Click the green Code button → Download ZIP → Extract the contents from the folder
+
+**3. Install each library**
+  - Open Terminal / Command Prompt or code editor of your choosing
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to learn more and install pandas, requests, and BeautifulSoup.
+
+👇 Here is how to install each library:
+```bash
+pip install pandas
+```
+```bash
+pip install requests
+```
+```bash
+pip install BeautifulSoup
+```
+
+**4. Run the Program**
+
+You can run the scraper for each phase by using this command:
+
+```bash
+python Phase_1.py
+```
+
+To check the other phases replace Phase_1.py with any of the other phases included in the zip folder.
+
+*Reminder: **Phase_4.py** is the completed code for the scraper and should be used to get all the data, csv excel file, and every book image.* 
+
+**5. Output**
+
+After running **Phase_4.py**, the program will:
+
+1. Start scraping book data from the website
+2. Download book images into a folder called "book_images"
+3. Create a csv file called "all_books_data.csv"
+
+👇 Here's an example of what the output for one book should look like:
+
+```bash
+Title: Sharp Objects  
+Price: £47.82  
+Category: Mystery  
+Rating: Four stars
+```
+
+## ⚠️ Important Notes
+
+👇 This command creates a delay when scraping the contents so it doesn’t overload the website
+
+```bash
+time.sleep(1)
+```
 
 ## 📄 License
 
