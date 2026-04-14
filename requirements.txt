@@ -1,4 +1,3 @@
-Requirements to run web scraper:
 pandas
 requests
 beautifulsoup4
