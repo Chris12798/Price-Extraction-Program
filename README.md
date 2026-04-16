@@ -80,7 +80,8 @@ python Phase_1.py
 
 To check the other phases replace Phase_1.py with any of the other phases included in the zip folder.
 
-*Reminder: **Phase_4.py** is the completed code for the scraper and should be used to get all the data, csv excel file, and every book image.* 
+> [!NOTE]
+**Phase_4.py** is the completed code for the scraper and should be used to get all the data, csv excel file, and cover image for every book. 
 
 **5. Output**
 
@@ -90,18 +91,19 @@ After running **Phase_4.py**, the program will:
 2. Download book images into a folder called "book_images"
 3. Create a csv file called "all_books_data.csv"
 
-👇 Here's an example of what the output for one book should look like:
+👇 Here's an example of what the output for one book should look like for the first few columns:
 
 ```bash
-Title: Sharp Objects  
-Price: £47.82  
-Category: Mystery  
-Rating: Four stars
+Title            Price     Category    Rating
+Sharp Objects    £47.82    Mystery     Four stars
 ```
 
-## ⚠️ Important Notes
+### **Congratulations! You have successfully ran the program!** 😄
 
-👇 This command creates a delay when scraping the contents so it doesn’t overload the website
+## 🗒️ Notes
+
+> [!IMPORTANT]
+The command below creates a delay when scraping the contents so it doesn’t overload the website. It's important to always have this so your IP doesn't get blocked for sending too many requests to the site too quickly. 
 
 ```bash
 time.sleep(1)
