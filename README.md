@@ -93,7 +93,7 @@ After running **Phase_4.py**, the program will:
 
 👇 Here's an example of what the output for one book should look like for the first few columns:
 
-```bash
+```python
 book_title                  universal_product_code     price_including_tax    quantity_available
 It's Only the Himalayas     a22124811bfa8350           Â£45.17                In stock (19 available)
 ```
