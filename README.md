@@ -10,7 +10,7 @@ Beta version of a price monitoring system for an online retailer. Containing fou
   - Product page URL
   - Universal Product Code (UPC)
   - Title
-  - Price w/ and w/out tax
+  - Prices
   - Quantity
   - Category
   - Rating
@@ -21,7 +21,7 @@ Beta version of a price monitoring system for an online retailer. Containing fou
 
 ## 📓 Phases
 
-There are four phases associated with this scraper that shows the evolution of the code. Each phase builds on top of each other to get the completed scraper, **"Phase_4.py"**
+There are four phases associated with this scraper that shows the evolution of the code. Each phase builds on top of each other to get the completed scraper, `Phase_4.py`
 
 **Phase 1: Single Book**
 
@@ -40,7 +40,7 @@ Scrapes all books across all categories.
 Scrapes all books across all categories then downloads every book image and stores them locally.
 
 ## ⚙️ Requirements
-- Python
+- Python - 3.14
 - pandas
 - requests
 - BeautifulSoup (bs4)
@@ -70,32 +70,51 @@ pip install requests
 pip install BeautifulSoup
 ```
 
-**4. Run the Program**
+**4. Navigate to the folder containing the code**
 
-You can run the scraper for each phase by using this command:
+This next section assumes you will be using Command Terminal to run the code. If you are using a specific code editor, find the appropriate way to run the program.
+
+In Command Terminal, the `cd` (change directory) command allows you to navigate your local files on your computer.
+
+For example:
+
+```bash
+cd \path\to\your\downloaded\code\folder
+```
+
+Replace `\path\to\your\downloaded\code\folder` with the actual path where the file is located on your computer
+
+👇 Here is an example of what mine looks like:
+
+```bash
+cd \C:\Users\Chris\Price-Extraction-Program
+```
+
+**4. Run the program**
+
+Now that you are in the right directory. You can now run the scraper for _Phase 1_ by using this command:
 
 ```bash
 python Phase_1.py
 ```
-
-To check the other phases replace Phase_1.py with any of the other phases included in the zip folder.
-
 > [!NOTE]
-**Phase_4.py** is the completed code for the scraper and should be used to get all the data, csv excel file, and cover image for every book. 
+> To check the other phases replace `Phase_1.py` with any of the other phases included in the zip folder.
 
 **5. Output**
 
-After running **Phase_4.py**, the program will:
+***`Phase_4.py` is the completed code for the scraper and should be used to gather the data, create the csv excel file, and download the cover image for every book***. 
 
-1. Start scraping book data from the website
-2. Download book images into a folder called "book_images"
-3. Create a csv file called "all_books_data.csv"
+After running `Phase_4.py`, the program will:
+
+- Start scraping book data from the website
+- Download book images into a folder called "book_images"
+- Create a csv file called "all_books_data.csv"
 
 👇 Here's an example of what the output for one book should look like for the first few columns:
 
-```python
-book_title                  universal_product_code     price_including_tax    quantity_available
-It's Only the Himalayas     a22124811bfa8350           Â£45.17                In stock (19 available)
+```text
+book_title                  product_page_url          universal_product_code    price_including_tax   quantity_available
+It's Only the Himalayas     https://books.toscrap...  a22124811bfa8350          Â£45.17               In stock (19 available)
 ```
 
 **Congratulations! You have successfully ran the program!** 😄
@@ -103,7 +122,7 @@ It's Only the Himalayas     a22124811bfa8350           Â£45.17                
 ## 🗒️ Notes
 
 > [!IMPORTANT]
-The command below creates a delay when scraping the contents so it doesn’t overload the website. It's important to always have this so your IP doesn't get blocked for sending too many requests to the site too quickly. 
+***The command below creates a delay when scraping the contents so it doesn’t overload the website. It's important to always have this so your IP doesn't get blocked for sending too many requests to the site too quickly***. 
 
 ```bash
 time.sleep(1)
